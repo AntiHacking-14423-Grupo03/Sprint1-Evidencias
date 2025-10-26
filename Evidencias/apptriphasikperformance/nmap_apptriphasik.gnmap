@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Fri Oct 24 23:40:43 2025 as: /usr/lib/nmap/nmap --privileged -sS -sV -T4 -Pn -oA nmap_apptriphasik app.triphasikperformance.com
+Host: 91.98.70.94 (static.94.70.98.91.clients.your-server.de)	Status: Up
+Host: 91.98.70.94 (static.94.70.98.91.clients.your-server.de)	Ports: 22/open/tcp//ssh//OpenSSH 9.6p1 Ubuntu 3ubuntu13.13 (Ubuntu Linux; protocol 2.0)/, 25/filtered/tcp//smtp///, 80/open/tcp//http//Caddy httpd/, 443/open/tcp//ssl|http//Caddy httpd/, 1165/filtered/tcp//qsm-gui///, 2161/filtered/tcp//apc-agent///, 2968/filtered/tcp//enpp///, 3306/open/tcp//mysql//MySQL 8.4.6/, 5432/open/tcp//tcpwrapped///, 7920/filtered/tcp/////	Ignored State: closed (990)
+# Nmap done at Fri Oct 24 23:43:39 2025 -- 1 IP address (1 host up) scanned in 176.39 seconds
