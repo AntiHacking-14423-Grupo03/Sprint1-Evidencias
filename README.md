@@ -1,4 +1,4 @@
-# Sprint 1 — Reconocimiento y Escaneo (Juan)
+# Sprint 1 — Reconocimiento y Escaneo 
 
 ## Evidencia inicial
 Durante el Sprint 1 se recopilaron evidencias de los dominios relacionados con el proyecto **RaymiFest** y su autor técnico.  
@@ -29,7 +29,7 @@ Todos los archivos fueron almacenados en la carpeta `Sprint1_Evidencias/` y docu
 </tbody>
 </table>
 
-📁 **Archivo de soporte:** [`inventario_activos_sprint1.xlsx`](./inventario_activos_sprint1.xlsx)
+**Archivo de soporte:** [`inventario_activos_sprint1.xlsx`](Evidencias/inventario_activos_sprint1.xlsx)
 
 ---
 
@@ -40,7 +40,8 @@ Todos los archivos fueron almacenados en la carpeta `Sprint1_Evidencias/` y docu
   Registrante identificado como **Janiel Franz Escalante Baygorrea**, ubicado en **Huamanga, Ayacucho (PE)**. <br>
   *Datos personales por completo expuestos incluyendo Telefono, Direccion, Codigo postal, correo electronico y Documento Nacional de Identidad (DNI)* <br>
   *Riesgo:* exposición de datos personales en registro público.  
-  **Archivo:** `whois_mathiaskunimoto.txt`
+  **Archivo:** `whois_mathiaskunimoto.txt`<br>
+![Whois Evidencia](Evidencias/mathiaskunimoto/whois_mathiaskunimoto.png)
 
 - **raymifest.com:**  
   Registro reciente (16 ago 2025), con privacidad activa mediante **Withheld for Privacy ehf (IS)**.  
@@ -55,6 +56,12 @@ Todos los archivos fueron almacenados en la carpeta `Sprint1_Evidencias/` y docu
 - Censys evidenció dos IPs históricas para `app.triphasikperformance.com`:
   - **161.132.49.43 (Perú)** — Snapshot anterior, HTTP 503 y MySQL 5.7.44.  
   - **91.98.70.94 (Alemania, Hetzner)** — Infraestructura actual con Caddy y MySQL 8.4.6.
+  - [Censys](https://search.censys.io/hosts/161.132.49.43?q=services.http.request.uri%3D%22http%3A%2F%2F161.132.49.43%2F%22&resource=hosts&at_time=2025-10-23T14%3A54%3A18.730Z)
+
+![Censys Evidencia](Evidencias/censys.png)
+*Se realizó Google dorking enfocado en los dominios investigados para buscar endpoints públicos, backups, paneles de administración o documentos expuestos.*
+**Resultado: únicamente se localizó el endpoint de acceso de WordPress en triphasikperformance.com:**
+https://triphasikperformance.com/wp-login.php
 
 ---
 
@@ -76,6 +83,39 @@ Resultados relevantes:
 Consolidación de Hallazgos
 <table> <thead> <tr><th>ID</th><th>Hallazgo</th><th>Evidencia / URL asociada</th><th>Impacto</th></tr> </thead> <tbody> <tr><td><b>H-01</b></td><td>Exposición pública de bases de datos (puertos 3306 / 5432)</td><td>app.triphasikperformance.com → Banners Nmap y Censys (MySQL 8.4.6, 5.7.44, MariaDB 10.6.18)</td><td><b>Crítico</b></td></tr> <tr><td><b>H-02</b></td><td>Servidor multi-propósito en entorno de producción</td><td>raymifest.com / mathiaskunimoto.com → Nmap RootServerCloud (web, mail, DNS, FTP, MySQL)</td><td><b>Alta</b></td></tr> <tr><td><b>H-03</b></td><td>Servicio SSH obsoleto (OpenSSH 7.4)</td><td>raymifest.com → Banner SSH 23.239.27.53</td><td><b>Alta</b></td></tr> <tr><td><b>H-04</b></td><td>VHost por defecto visible (/cgi-sys/defaultwebpage.cgi)</td><td>raymifest.com → HTTP 80 default page</td><td><b>Media</b></td></tr> <tr><td><b>H-05</b></td><td>Datos personales visibles en WHOIS</td><td>mathiaskunimoto.com → Registrante: Janiel Franz Escalante Baygorrea</td><td><b>Media</b></td></tr> <tr><td><b>H-06</b></td><td>Entorno Caddy 503 sin restricción de acceso</td><td>app.triphasikperformance.com → Censys 161.132.49.43 snapshot</td><td><b>Baja</b></td></tr> <tr><td><b>H-07</b></td><td>Puerto 8080 expuesto (HTTP-Proxy 404)</td><td>mathiaskunimoto.com → Nmap 8080/tcp open http-proxy 404</td><td><b>Baja</b></td></tr> </tbody> </table>
 
-📂 Soporte: Ver carpeta Sprint1_Evidencias/ y archivo inventario_activos_sprint1.xlsx.
+## Subida al repositorio
 
+### Estructura recomendada:
+
+/Sprint1_RaymiFest/
+├─ README.md
+└─ Sprint1_Evidencias/
+   ├─ apptriphasikperformance/   
+   ├─ mathiaskunimoto/
+   ├─ raymifest/
+   ├─ .gitkeep
+   └─ inventario_activos_sprint1.xlsx
+   
+## Retrospectiva del Sprint
+
+Se logró identificar la infraestructura asociada a Raymifest, Mathiaskunimoto y Triphasik Performance.
+
+Se detectó una exposición crítica de bases de datos accesibles desde Internet.
+
+Los datos del autor en WHOIS facilitaron el enlace entre los dominios.
+
+La metodología empleada (OSINT + Nmap + Censys) permitió correlacionar servicios en un entorno compartido.
+
+Para el siguiente sprint se plantea:
+
+Enumerar directorios web y subdominios.
+
+Analizar versiones de Exim, Dovecot y PowerDNS.
+
+Iniciar pruebas de autenticación y configuración.
+
+## Conclusión general:
+El Sprint 1 cumplió con los objetivos de reconocimiento y escaneo, permitiendo consolidar un mapa inicial de infraestructura y vulnerabilidades críticas.
+
+**Autor: Juan Alejandro Cuadros Rodriguez - Pentester Web**
 
