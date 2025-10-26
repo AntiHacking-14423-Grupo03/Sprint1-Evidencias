@@ -11,7 +11,7 @@ Todos los archivos fueron almacenados en la carpeta `Sprint1_Evidencias/` y docu
 - `nmap_raymifest.*` — Escaneo de `raymifest.com` (RootServerCloud).
 - `nmap_mathiaskunimoto.*` — Escaneo de `mathiaskunimoto.com` (mismo host que Raymifest).
 - `nmap_apptriphasik.*` — Escaneo de `app.triphasikperformance.com` (Hetzner).
-- `censys_161.132.49.43.png` — Snapshot Censys (entorno anterior).
+- `censys.png` — Snapshot Censys (entorno anterior).
 
 ---
 
