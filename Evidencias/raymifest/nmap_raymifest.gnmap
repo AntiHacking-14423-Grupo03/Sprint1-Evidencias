@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Fri Oct 24 23:35:36 2025 as: /usr/lib/nmap/nmap --privileged -sS -sV -T4 -Pn -oA nmap_raymifest raymifest.com
+Host: 23.239.27.53 (paul.hostservercloud.com)	Status: Up
+Host: 23.239.27.53 (paul.hostservercloud.com)	Ports: 21/open/tcp//ftp//Pure-FTPd/, 22/open/tcp//ssh//OpenSSH 7.4 (protocol 2.0)/, 53/open/tcp//domain//PowerDNS Authoritative Server 4.7.3/, 80/open/tcp//http///, 110/open/tcp//pop3//Dovecot pop3d/, 143/open/tcp//imap//Dovecot imapd/, 443/open/tcp//ssl|https///, 465/open/tcp//ssl|smtp//Exim smtpd 4.96.2/, 587/open/tcp//smtp//Exim smtpd 4.96.2/, 993/open/tcp//imaps?///, 995/open/tcp//pop3s?///, 3306/open/tcp//mysql//MariaDB 5.5.5-10.6.18/, 8080/open/tcp//http-proxy///	Ignored State: filtered (987)
+# Nmap done at Fri Oct 24 23:38:03 2025 -- 1 IP address (1 host up) scanned in 146.73 seconds

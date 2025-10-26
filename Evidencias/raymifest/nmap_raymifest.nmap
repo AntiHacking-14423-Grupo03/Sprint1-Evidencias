@@ -1,0 +1,130 @@
+# Nmap 7.95 scan initiated Fri Oct 24 23:35:36 2025 as: /usr/lib/nmap/nmap --privileged -sS -sV -T4 -Pn -oA nmap_raymifest raymifest.com
+Nmap scan report for raymifest.com (23.239.27.53)
+Host is up (0.10s latency).
+rDNS record for 23.239.27.53: paul.hostservercloud.com
+Not shown: 987 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        Pure-FTPd
+22/tcp   open  ssh        OpenSSH 7.4 (protocol 2.0)
+53/tcp   open  domain     PowerDNS Authoritative Server 4.7.3
+80/tcp   open  http
+110/tcp  open  pop3       Dovecot pop3d
+143/tcp  open  imap       Dovecot imapd
+443/tcp  open  ssl/https
+465/tcp  open  ssl/smtp   Exim smtpd 4.96.2
+587/tcp  open  smtp       Exim smtpd 4.96.2
+993/tcp  open  imaps?
+995/tcp  open  pop3s?
+3306/tcp open  mysql      MariaDB 5.5.5-10.6.18
+8080/tcp open  http-proxy
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.95%I=7%D=10/24%Time=68FC4595%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,160,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\ncontent-
+SF:type:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202020\x2020
+SF::01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20163\r\nd
+SF:ate:\x20Sat,\x2025\x20Oct\x202025\x2003:35:49\x20GMT\r\n\r\n<html><head
+SF:><META\x20HTTP-EQUIV=\"Cache-control\"\x20CONTENT=\"no-cache\"><META\x2
+SF:0HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=/cgi-sys/defaultwebpage\.cgi
+SF:\"></head><body></body></html>\n")%r(HTTPOptions,7C,"HTTP/1\.0\x20200\x
+SF:20OK\r\nConnection:\x20close\r\nallow:\x20OPTIONS,HEAD,GET,POST\r\ncont
+SF:ent-length:\x200\r\ndate:\x20Sat,\x2025\x20Oct\x202025\x2003:35:49\x20G
+SF:MT\r\n\r\n")%r(RTSPRequest,3DD,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:onnection:\x20close\r\ncache-control:\x20private,\x20no-cache,\x20no-st
+SF:ore,\x20must-revalidate,\x20max-age=0\r\npragma:\x20no-cache\r\ncontent
+SF:-type:\x20text/html\r\ncontent-length:\x20769\r\ndate:\x20Sat,\x2025\x2
+SF:0Oct\x202025\x2003:35:49\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20sty
+SF:le=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"\x20/>\n<tit
+SF:le>\x20400\x20Bad\x20Request\r\n</title><style>@media\x20\(prefers-colo
+SF:r-scheme:dark\){body{background-color:#000!important}}</style></head>\n
+SF:<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20normal\x2014px/20
+SF:px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20background
+SF:-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-height:100%;\x
+SF:20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20center;\x20widt
+SF:h:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x20top:\x2030
+SF:%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\"marg
+SF:in:0;\x20font-size:150px;\x20line-height:150px;\x20font-weight:bold;\">
+SF:400</h1>\n<h2\x20style=\"margin-top:20px;font-size")%r(FourOhFourReques
+SF:t,1C20,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\ncon
+SF:tent-type:\x20text/html\r\ndate:\x20Sat,\x2025\x20Oct\x202025\x2003:35:
+SF:55\x20GMT\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x20\x20<hea
+SF:d>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=\"t
+SF:ext/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Ca
+SF:che-control\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"Pragma\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<meta\x20http
+SF:-equiv=\"Expires\"\x20content=\"0\">\n\x20\x20\x20\x20<meta\x20name=\"v
+SF:iewport\"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x
+SF:20\x20\x20\x20<title>404\x20Not\x20Found</title>\n\x20\x20\x20\x20<styl
+SF:e\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20
+SF:Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20line-height:\x201\.428571429;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20background-color:\x20#ffffff;\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20section,\x20footer\x20{\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20display:\x20block;\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\.container\x20{\n\x20\x20\x20\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.95%T=SSL%I=7%D=10/24%Time=68FC459B%P=x86_64-pc-linux-gn
+SF:u%r(GetRequest,193,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nc
+SF:ontent-type:\x20text/html\r\nlast-modified:\x20Sat,\x2025\x20Feb\x20202
+SF:3\x2020:12:36\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x202
+SF:14\r\ndate:\x20Sat,\x2025\x20Oct\x202025\x2003:35:55\x20GMT\r\n\r\n<!DO
+SF:CTYPE\x20html>\r\n<html>\r\n<head>\r\n\x20\x20<title>Power\x20Server</t
+SF:itle>\r\n</head>\r\n<body>\r\n\r\n<div\x20style=\"text-align:\x20center
+SF:;\">\r\n\x20\x20<img\x20src=\"symbol\.jpg\"\x20alt=\"Sky\"\x20style=\"p
+SF:adding-top:\x20250px;\x20height:\x20150px;\">\r\n</div>\r\n\r\n</body>"
+SF:)%r(HTTPOptions,7C,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\na
+SF:llow:\x20OPTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Sat,
+SF:\x2025\x20Oct\x202025\x2003:35:56\x20GMT\r\n\r\n")%r(FourOhFourRequest,
+SF:3F6,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\ncache-
+SF:control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate,\x20m
+SF:ax-age=0\r\npragma:\x20no-cache\r\ncontent-type:\x20text/html\r\nconten
+SF:t-length:\x20796\r\ndate:\x20Sat,\x2025\x20Oct\x202025\x2003:35:56\x20G
+SF:MT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n
+SF:<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-
+SF:scale=1,\x20shrink-to-fit=no\"\x20/>\n<title>\x20404\x20Not\x20Found\r\
+SF:n</title><style>@media\x20\(prefers-color-scheme:dark\){body{background
+SF:-color:#000!important}}</style></head>\n<body\x20style=\"color:\x20#444
+SF:;\x20margin:0;font:\x20normal\x2014px/20px\x20Arial,\x20Helvetica,\x20s
+SF:ans-serif;\x20height:100%;\x20background-color:\x20#fff;\">\n<div\x20st
+SF:yle=\"height:auto;\x20min-height:100%;\x20\">\x20\x20\x20\x20\x20<div\x
+SF:20style=\"text-align:\x20center;\x20width:800px;\x20margin-left:\x20-40
+SF:0px;\x20position:absolute;\x20top:\x2030%;\x20left:50%;\">\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20<h1\x20style=\"margin:0;\x20font-size:150px;\x20li
+SF:ne-height:150px;\x20font-weight:bold;\">404</h1>\n<h2\x20style=\"margin
+SF:-top:20px;font-size:\x2030")%r(RTSPRequest,3DD,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nConnection:\x20close\r\ncache-control:\x20private,\x20no
+SF:-cache,\x20no-store,\x20must-revalidate,\x20max-age=0\r\npragma:\x20no-
+SF:cache\r\ncontent-type:\x20text/html\r\ncontent-length:\x20769\r\ndate:\
+SF:x20Sat,\x2025\x20Oct\x202025\x2003:36:07\x20GMT\r\n\r\n<!DOCTYPE\x20htm
+SF:l>\n<html\x20style=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"
+SF:\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=
+SF:no\"\x20/>\n<title>\x20400\x20Bad\x20Request\r\n</title><style>@media\x
+SF:20\(prefers-color-scheme:dark\){body{background-color:#000!important}}<
+SF:/style></head>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20n
+SF:ormal\x2014px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100
+SF:%;\x20background-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20mi
+SF:n-height:100%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x2
+SF:0center;\x20width:800px;\x20margin-left:\x20-400px;\x20position:absolut
+SF:e;\x20top:\x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1
+SF:\x20style=\"margin:0;\x20font-size:150px;\x20line-height:150px;\x20font
+SF:-weight:bold;\">400</h1>\n<h2\x20style=\"margin-top:20px;font-size");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.95%I=7%D=10/24%Time=68FC4595%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,24,"HTTP/1\.1\x20404\x20Not\x20Found\r\n\r\nNot\x20found\.")%
+SF:r(HTTPOptions,24,"HTTP/1\.1\x20404\x20Not\x20Found\r\n\r\nNot\x20found\
+SF:.")%r(RTSPRequest,24,"HTTP/1\.1\x20404\x20Not\x20Found\r\n\r\nNot\x20fo
+SF:und\.")%r(FourOhFourRequest,24,"HTTP/1\.1\x20404\x20Not\x20Found\r\n\r\
+SF:nNot\x20found\.")%r(Socks5,28,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r
+SF:\nBad\x20request\.")%r(SIPOptions,28,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\n\r\nBad\x20request\.");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 24 23:38:03 2025 -- 1 IP address (1 host up) scanned in 146.73 seconds
